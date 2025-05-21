@@ -11,7 +11,7 @@ class Solution {
             max=majority.get(i);
             n=i;
         }
-        max=Math.max(max,majority.get(i));
+
     }
     return n;
     }
