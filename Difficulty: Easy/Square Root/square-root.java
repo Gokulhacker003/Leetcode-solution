@@ -6,6 +6,22 @@ this function*/
 class Solution {
     int floorSqrt(int n) {
         // Your code here
-        return(int)Math.sqrt(n);
+        
+        int i=1;
+        int j= n;
+        while(j>=i){
+            int mid=(i+j)/2;
+            int sqr=mid*mid;
+            if(sqr==n){
+                return mid;
+            }
+            if(sqr>n){
+                j=mid-1;
+            }
+            else{
+                i=mid+1;
+            }
+        }
+        return j;
     }
 }
